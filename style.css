@@ -1,0 +1,101 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #3981b3;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+#main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#controls {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+}
+
+.input{
+border: none;
+width: 200px;
+height: 30px;
+font-size: 15px;
+border-radius: 10px;
+box-shadow: 1px 1px 5px black;
+}
+
+#field {
+  display: grid;
+  gap: 1px;
+}
+
+#actions{
+  display: block;
+}
+
+#createField,#startRobot{
+  background: #6de86d;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px black;
+  padding: 5px;
+  cursor: pointer;
+}
+
+#createField:hover,#startRobot:hover{
+  background: hsl(120, 97%, 26%);
+  color: white;
+  transition: all 300ms;
+}
+
+#reload{
+  background: #c45959;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px black;
+  padding: 5px;
+  cursor: pointer;
+}
+
+#reload:hover{
+  background: hsl(0, 100%, 27%);
+  color: white;
+  transition: all 300ms;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.cell.fruit {
+  background-color: #ffa500;
+}
+
+.cell.robot {
+  background-color: #007bff;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Robot Recolector de Frutas</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Robot Recolector de Frutas</h1>
+    </header>
+
+    <main id="main">
+      <section id="controls">
+        <label for="rows">Filas:</label>
+        <input type="number" class="input" id="rows" min="1" value="5" />
+        <label for="cols">Columnas:</label>
+        <input type="number" class="input" id="cols" min="1" value="5" />
+        <button id="createField">Crear Campo</button>
+      </section>
+
+      <section id="field"></section>
+
+      <section id="actions">
+        <button id="reload">Reiniciar</button>
+        <button id="startRobot">Iniciar Robot</button>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
