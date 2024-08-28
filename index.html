@@ -12,20 +12,27 @@
     </header>
 
     <main id="main">
+
       <section id="controls">
         <label for="rows">Filas:</label>
         <input type="number" class="input" id="rows" min="1" value="5" />
         <label for="cols">Columnas:</label>
         <input type="number" class="input" id="cols" min="1" value="5" />
-        <button id="createField">Crear Campo</button>
+        <button id="createField" class="button_blue">Crear</button>
       </section>
 
-      <section id="field"></section>
+      <section id="trees">
+        <p>Seleccione las posiciones y luego de click en iniciar</p>
+        <section id="field"></section>
+      </section>
+
+ 
 
       <section id="actions">
-        <button id="reload">Reiniciar</button>
-        <button id="startRobot">Iniciar Robot</button>
+        <button id="reload" class="button_red">Reiniciar</button>
+        <button id="startRobot" class="button_blue">Iniciar</button>
       </section>
+
     </main>
 
     <script src="./script.js"></script>

@@ -1,26 +1,34 @@
+*{
+  margin: 0px auto;
+  padding: 0px;
+}
+
 body {
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0;
-  padding: 0;
+  background: linear-gradient(90deg,aliceblue,rgb(107, 238, 255),aliceblue);
+
 }
 
 header {
   background-color: #3981b3;
   color: white;
-  padding: 15px;
   text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
   width: 100%;
 }
 
 #main{
   display: flex;
+  width: 100%;
+  height: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 
 #controls {
@@ -30,6 +38,7 @@ header {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  padding: 20px;
 
 }
 
@@ -43,42 +52,25 @@ box-shadow: 1px 1px 5px black;
 }
 
 #field {
-  display: grid;
+  display: none;
   gap: 1px;
 }
 
 #actions{
-  display: block;
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
 }
 
-#createField,#startRobot{
-  background: #6de86d;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px black;
-  padding: 5px;
-  cursor: pointer;
-}
-
-#createField:hover,#startRobot:hover{
-  background: hsl(120, 97%, 26%);
-  color: white;
-  transition: all 300ms;
-}
-
-#reload{
-  background: #c45959;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px black;
-  padding: 5px;
-  cursor: pointer;
-}
-
-#reload:hover{
-  background: hsl(0, 100%, 27%);
-  color: white;
-  transition: all 300ms;
+#trees{
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
 
 .cell {
@@ -99,3 +91,97 @@ box-shadow: 1px 1px 5px black;
 .cell.robot {
   background-color: #007bff;
 }
+
+
+/**Styles to Buttons of red**/
+.button_red {
+  --color: #ff0000;
+  font-family: inherit;
+  display: inline-block;
+  width: 6em;
+  height: 2.6em;
+  line-height: 2.5em;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 20px;
+  font-size: 17px;
+  z-index: 1;
+  color: var(--color);
+  border: 2px solid var(--color);
+  border-radius: 6px;
+  position: relative;
+}
+
+.button_red::before {
+  position: absolute;
+  content: "";
+  background: var(--color);
+  width: 150px;
+  height: 200px;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.button_red:hover {
+  color: white;
+}
+
+.button_red:before {
+  top: 100%;
+  left: 100%;
+  transition: 0.3s all;
+}
+
+.button_red:hover::before {
+  top: -30px;
+  left: -30px;
+}
+
+
+
+/**Styles to Buttons of green**/
+
+.button_blue {
+  --color: #0077ff;
+  font-family: inherit;
+  display: inline-block;
+  width: 6em;
+  height: 2.6em;
+  line-height: 2.5em;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 20px;
+  font-size: 17px;
+  z-index: 1;
+  color: var(--color);
+  border: 2px solid var(--color);
+  border-radius: 6px;
+  position: relative;
+}
+
+.button_blue::before {
+  position: absolute;
+  content: "";
+  background: var(--color);
+  width: 150px;
+  height: 200px;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.button_blue:hover {
+  color: white;
+}
+
+.button_blue:before {
+  top: 100%;
+  left: 100%;
+  transition: 0.3s all;
+}
+
+.button_blue:hover::before {
+  top: -30px;
+  left: -30px;
+}
+
+
